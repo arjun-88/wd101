@@ -1,99 +1,90 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        html forms with js
-    </title>
-    <style>
-
-        body{ 
-            padding : 4px;
-           
-            background : aqua;
-            text-align :left ;
-        }
-        h2{
-            color : blue;
-        }
-        .container{
-            padding: 16px;
-        }
-        input[type=text], input[type=password] ,input[type=date], input[type=email]{
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1;
-        }
-
-        input[type=text]:focus, input[type=password]:focus, input[type=date]:focus, input[type=email]:focus{
-            background-color: #ddd;
-            outline: none;
-        }
-        table , th,td{
-           border : 3px solid black;
-           border-collapse : collapse;
-           padding: auto;
-        }
-      
-        
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <title> Registration Form </title>
 </head>
 <body>
-    <form id="user-form">
-        <div style="border: 3px;" class="form">
-            <h2>Registration Form</h2>
-            <label for="name"><b>Name</b></label>
-            <input type="text" placeholder="Enter Full Name" name="name" id="name" required><br>
-            <label for="mail"><b>Email</b></label>
-            <input type="email" id="mail" name="mail" placeholder="Enter Email"><br>
-            <label for="password">password</label>
-            <input type="password" required name="password" id="password" placeholder="Enter password"><br>
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="name" placeholder="Enter DOB"><br>
-            
-            <input type="checkbox" id="terms" name="terms">
-            <label for="terms">Accept terms and Conditions</label><br>
-            <button type="submit" id="Submit"><b>Submit</b></button>
-        </div>
-        <div style="position :relative ">
-            <h2 >Entries</h2>
-            <div id="res">
-                
-                <p></p>
-            </div>
-        </div>
+    <h1 align="center" class="head">Registration Form</h1>
+    <div class="box">
+      <form class="form" id="form">
 
-    </form>
-    <script src="index.js">
-/*let form= document.getElementById("user-form");
-console.log(1);
+        <table class="tableForm" cellspacing="25px">
+          <tr>
+            <td><label for="name">Name :</label></td>
+            <td>
+              <input
+                class="input"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Full Name"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">E-mail :</label></td>
+            <td>
+              <input
+                class="input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="name">Password :</label></td>
+            <td>
+              <input
+                class="input"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dob">Date Of Birth :</label></td>
+            <td>
+              <input
+                style="width: 220px"
+                class="input"
+                type="date"
+                name="dob"
+                id="dob"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="checkbox" name="agree" id="agree" />
+              <label for="checkbox">I agree the Terms & Conditions</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="btn" type="submit">Submit</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
 
-//form.addEventListener("submit",saveform)
-
-const saveform=()=>{
-    console.log(2)
-    event.preventdefault();
-    const name=document.getElementById("name").value;
-    const email=document.getElementById("email-id").value;
-    const password=document.getElementById("password").value;
-    const dob= document.getElementById("dob").value;
-
-    const terms=document.getElementById("terms").checked;
-    let totalEntries=[];
-    const entry={
-        name,
-        email,
-        password,
-        dob,
-        terms
-    }
-    totalEntries.push(entry);
-    localStorage.setItem("user-entry",JSON.stringify(totalEntries));
-
-}
-
-form.addEvemtListener("Submit",saveform);*/
-    </script>
+    <div class="entry">
+      <h2 class="subHead">Entries</h2>
+      <div id="tableDiv"></div>
+    </div>
+    
 </body>
+</html>
