@@ -30,7 +30,7 @@ let data = getdata();
 const showdata =()=>{
     const data1 = getdata();
     const tableEntries = data1.map((entry)=>{
-        const nameCell = `<td>${entry.name}</td>`;
+        const nameCell = `<td>${entry.n}</td>`;
 
         const emailCell = `<td>${entry.ema}</td>`;
         const passwordCell = `<td>${entry.passw}</td>`;
