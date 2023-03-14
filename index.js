@@ -53,8 +53,8 @@ const showdata =()=>{
 
     let data = document.getElementById("res");
     data.innerHTML = tab;
-    alert(condterms.checked);
-   check_terms();
+    //alert(condterms.checked);
+   //check_terms();
 }
 const savedform = (event)=>{
     event.preventDefault();
